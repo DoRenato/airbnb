@@ -7,7 +7,7 @@ import Link from "next/link";
 /* <Image src="/img/airbnb_logo.png" alt="" width={300} height={300}></Image> */
 export default function BarraSuperior() {
   return (
-    <div className="flex justify-between items-center">
+    <div className="container flex mx-auto py-6 justify-between items-center">
         <Logo/>
         <div className="flex gap-6">
             <Link href="/" className="font-semibold">Acomodações</Link>
