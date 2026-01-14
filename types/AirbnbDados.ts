@@ -12,7 +12,7 @@ export interface Acommodation{
     hasBadge: boolean
     price: number
     rating: number
-    location: []
+    location: Location
     testimonials:Testimonial[]
     photos:Photo[]
 }
