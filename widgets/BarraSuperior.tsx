@@ -4,7 +4,6 @@ import { IconUserCircle } from "@tabler/icons-react";
 import Link from "next/link";
 
 
-/* <Image src="/img/airbnb_logo.png" alt="" width={300} height={300}></Image> */
 export default function BarraSuperior() {
   return (
     <div className="py-6 flex justify-between items-center">
