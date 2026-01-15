@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Airbnb (Clone UI) — Next.js
 
-## Getting Started
+Projeto de estudo que recria partes da interface do Airbnb usando **Next.js (App Router)**, **React**, **TypeScript** e **Tailwind CSS**.
 
-First, run the development server:
+A aplicação consome um endpoint público para listar categorias (ícones) e acomodações, além de uma página de detalhes por `slug`.
+
+## Demo local
+
+- Página inicial: lista de acomodações e navegação horizontal de categorias
+- Página de detalhes: `/[slug]`
+
+## Stack
+
+- **Next.js 16** (App Router)
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS** (via PostCSS)
+- **Swiper** (carrossel/abas horizontais)
+- **@tabler/icons-react** (ícones)
+
+## Fonte de dados
+
+Os dados são buscados via `fetch` em:
+
+- `https://web.codans.com.br/airbnb`
+
+A tipagem do payload está em `types/AirbnbDados.ts`.
+
+## Como rodar o projeto
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Rode em modo desenvolvimento:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Abra no navegador:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `http://localhost:3000`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Scripts disponíveis
 
-## Learn More
+- `npm run dev` — inicia o servidor de desenvolvimento
+- `npm run build` — gera build de produção
+- `npm run start` — inicia o servidor em modo produção (após build)
+- `npm run lint` — executa o ESLint
 
-To learn more about Next.js, take a look at the following resources:
+## Estrutura de pastas (resumo)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/`
+  - `page.tsx` — home (Server Component): carrega dados e renderiza widgets
+  - `[slug]/page.tsx` — detalhes da acomodação por `slug`
+  - `layout.tsx` — layout raiz e metadados
+- `widgets/` — blocos de UI (barra superior, busca, navegação, galeria, etc.)
+- `components/` — componentes menores reutilizáveis (ex.: `Logo`, `BotaoIcone`, `Acomodacao`)
+- `utils/api.ts` — funções de acesso aos dados (`fetchData`, `fetchDataBySlug`)
+- `types/` — interfaces TypeScript do payload
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Observações
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- O domínio de imagens remoto (`web.codans.com.br`) está liberado em `next.config.ts` para uso com `next/image`.
+- Não há autenticação e não há backend próprio neste repositório; o foco é UI e consumo de dados.
