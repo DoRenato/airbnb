@@ -20,7 +20,7 @@ export default function Acomodacoes(props: AcomodacoesProps) {
                     data={item.date} preco={item.price} avaliacao={item.rating}
                     favoritoHospedes={item.hasBadge}
                     >
-                        <Link href={"/"}>
+                        <Link href={item.slug}>
                             <Image 
                             src={item.photos[0].source} 
                             alt={item.photos[0].description} 
