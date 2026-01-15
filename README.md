@@ -6,8 +6,11 @@ A aplicação consome um endpoint público para listar categorias (ícones) e ac
 
 ## Demo local
 
-- Página inicial: lista de acomodações e navegação horizontal de categorias
+- Página inicial: lista de acomodações e navegação horizontal de categorias (apenas visual)
+![alt text](assets/image_readme1.png)
+
 - Página de detalhes: `/[slug]`
+![alt text](assets/image_readme2.png)
 
 ## Stack
 
