@@ -9,7 +9,7 @@ export function qtdComodos(){
     const hospedes = gerarNumeroAleatorio()
     const minQuartos = Math.trunc(hospedes/2)
     const quartos = gerarNumeroAleatorio(minQuartos,hospedes)
-    const camas = gerarNumeroAleatorio(quartos, quartos*2)
+    const camas = gerarNumeroAleatorio(quartos, hospedes)
     const banheiros = gerarNumeroAleatorio(minQuartos, hospedes)
     return {hospedes, quartos, camas, banheiros}
 }
