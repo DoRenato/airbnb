@@ -20,7 +20,7 @@ export default function AbaHorizontal(props:AbaHorizontalProps) {
     const icones = props.icons
 
   return (
-    <div className='flex'>
+    <div className='flex pt-15'>
         <Swiper
             spaceBetween={10}
             slidesPerView={3}

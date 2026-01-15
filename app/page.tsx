@@ -5,6 +5,7 @@ import Acomodacoes from "@/widgets/Acomodacoes";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
 import NavegacaoAbasHorizontal from "@/widgets/NavegacaoAbasHorizontal";
+import Rodape from "@/widgets/Rodape";
 
 export default async function Home() {
   const dados=await fetchData()
@@ -15,18 +16,14 @@ export default async function Home() {
         <BarraSuperior/>
         <BarraPesquisa/>
       </header>
-
-      <hr className="my-5"/>
       
       <main className="container mx-auto">
         <NavegacaoAbasHorizontal icons={dados.icons}/>
         <Acomodacoes accommodation={dados.accommodation}/>
       </main>
 
-      <hr className="my-5"/>
-
-      <footer className="container mx-auto">
-        Rodapé
+      <footer className="bg-gray-100">
+        <Rodape/>
       </footer>
     </>
   );
