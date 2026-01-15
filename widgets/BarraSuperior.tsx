@@ -7,7 +7,9 @@ import Link from "next/link";
 export default function BarraSuperior() {
   return (
     <div className="py-6 flex justify-between items-center">
-        <Logo/>
+        <Link href={"/"}>
+            <Logo/>
+        </Link>
         <div className="flex gap-6">
             <Link href="/" className="font-semibold">Acomodações</Link>
             <Link href="/" className="opacity-60">Experiências</Link>

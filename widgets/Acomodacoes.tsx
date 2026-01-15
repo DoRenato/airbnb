@@ -1,4 +1,4 @@
-import { Acommodation } from '@/types/AirbnbDados';
+import { Accommodation } from '@/types/AirbnbDados';
 import Link from "next/link";
 import Image from "next/image";
 import Acomodacao from '@/components/Acomodacao';
@@ -6,7 +6,7 @@ import Acomodacao from '@/components/Acomodacao';
 
 
 interface AcomodacoesProps{
-    accommodation: Acommodation[]
+    accommodation: Accommodation[]
 }
 
 export default function Acomodacoes(props: AcomodacoesProps) {

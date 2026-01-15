@@ -1,4 +1,5 @@
 import { fetchDataBySlug } from "@/utils/api";
+import AcomodacaoDetalhes from "@/widgets/AcomodacaoDetalhes";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
 import Galeria from "@/widgets/Galeria";
@@ -26,11 +27,14 @@ export default async function PaginaDetalhes({params} : {params: Promise<PaginaD
                 <BarraPesquisa/>
             </header>
 
-            <main className="container mx-auto py-10">
+            <main className="container mx-auto py-15">
                 <h1 className="font-bold text-lg pb-2">
-                    {acomodacao.title}
+                    {acomodacao.location.description}
                 </h1>
                 <Galeria fotos={acomodacao.photos}/>
+                <div className="grid grid-cols-2 pt-3">
+                    <AcomodacaoDetalhes accomodation={acomodacao}/>
+                </div>
             </main>
 
             <footer className="bg-gray-100">

@@ -1,9 +1,9 @@
 export interface AirbnbApi{
-    accommodation:Acommodation[]
+    accommodation:Accommodation[]
     icons:Icon[]
 }
 
-export interface Acommodation{
+export interface Accommodation{
     date: string
     host: string
     id: string

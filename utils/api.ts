@@ -1,4 +1,4 @@
-import { Acommodation, AirbnbApi } from "@/types/AirbnbDados";
+import { Accommodation, AirbnbApi } from "@/types/AirbnbDados";
 
 export async function fetchData(): Promise<AirbnbApi>{
     try {
@@ -12,12 +12,12 @@ export async function fetchData(): Promise<AirbnbApi>{
 
 }
 
-export async function fetchDataBySlug(slug:string): Promise<Acommodation | undefined>{
+export async function fetchDataBySlug(slug:string): Promise<Accommodation | undefined>{
     try {
         const dados = await fetchData()
         const acomodacao = dados.accommodation.find(
-            (item: Acommodation) => {
-                return item.slug === slug
+            (item: Accommodation) => {
+                return item.slug === slug // poderia ser 'item.slug === decodeURIComponent(slug)' para strings que possuem acento
             }
         )
         return acomodacao
