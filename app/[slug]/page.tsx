@@ -1,4 +1,5 @@
 import { fetchDataBySlug } from "@/utils/api";
+import AcomodacaoDepoimentos from "@/widgets/AcomodacaoDepoimentos";
 import AcomodacaoDetalhes from "@/widgets/AcomodacaoDetalhes";
 import BarraPesquisa from "@/widgets/BarraPesquisa";
 import BarraSuperior from "@/widgets/BarraSuperior";
@@ -34,6 +35,7 @@ export default async function PaginaDetalhes({params} : {params: Promise<PaginaD
                 <Galeria fotos={acomodacao.photos}/>
                 <div className="grid grid-cols-2 pt-3">
                     <AcomodacaoDetalhes accomodation={acomodacao}/>
+                    <AcomodacaoDepoimentos rating={acomodacao.rating} depoimentos={acomodacao.testimonials}/>
                 </div>
             </main>
 
