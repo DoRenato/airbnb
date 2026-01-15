@@ -35,7 +35,7 @@ export default function Acomodacao({children, local, anfitriao, data, preco, ava
                             {local}
                         </span>
                         <div className="flex items-center gap-1 text-sm">
-                            <IconStarFilled className="" aria-label="ícone de Favoritos" size={12} color="black"/>
+                            <IconStarFilled className="" aria-label="ícone de Avaliação" size={12} color="black"/>
                             <span>{avaliacao}</span>
                         </div>
                     </div>
