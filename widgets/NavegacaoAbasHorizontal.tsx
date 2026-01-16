@@ -38,7 +38,7 @@ export default function AbaHorizontal(props:AbaHorizontalProps) {
             >
                 {icones.map((icone, indice)=>(
                     <SwiperSlide key={indice}>
-                        <Link href={icone.url} className='flex flex-col items-center hover:text-red-400'>
+                        <Link href="#" className='flex flex-col items-center hover:text-red-400'>
                             <Image src={icone.source} alt={icone.description} width={24} height={24}/>
                             <span>{icone.description}</span>
                         </Link>
