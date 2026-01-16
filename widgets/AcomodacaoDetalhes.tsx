@@ -16,11 +16,11 @@ export default function AcomodacaoDetalhes(props:AcomodacaoDetalhesProps) {
     title=acomodacao.title
   }
   return (
-    <div className="">
+    <div className="px-3 md:px-0">
         <h1 className="font-bold text-lg">
             {title}
         </h1>
-        <ul className="container flex mx-auto items-center pt-1 gap-1 text-sm">
+        <ul className="flex mx-auto items-center pt-1 gap-1 text-sm">
             <li>
                 {hospedes} Hóspedes
             </li>

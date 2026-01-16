@@ -6,7 +6,7 @@ interface TextoIconeProps{
  const TextoIcone = (props: TextoIconeProps) => {
   return (
     <>
-        <div className="flex py-2 gap-2 items-center">
+        <div className="flex py-2 gap-2 items-start md:items-center">
             {props.icone}
             {props.children}
         </div>

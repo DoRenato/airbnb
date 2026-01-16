@@ -12,13 +12,15 @@ export default function AcomodacaoDepoimentos(props:AcomodacaoDepoimentosProps) 
   const depoimentos = props.depoimentos
   const rating = props.rating
   return (
-    <div className="">
-        <h1 className="font-bold text-lg">
-            Depoimentos
-        </h1>
-        <div className="flex items-baseline gap-x-1 pb-5">
-          <IconStarFilled className="" aria-label="ícone de Avaliação" size={15} color="black"/>
-          <span>{rating} (400+ avaliações)</span>
+    <div className="px-3 pt-10 lg:pt-0">
+        <div className="flex flex-col items-center lg:items-start lg:pb-5">
+          <h1 className="font-bold text-lg">
+              Depoimentos
+          </h1>
+          <div className="flex items-baseline gap-1">
+            <IconStarFilled className="" aria-label="ícone de Avaliação" size={15} color="black"/>
+            <span>{rating} (400+ avaliações)</span>
+          </div>
         </div>
         {depoimentos.map((depoimento, indice)=>(
           <div key={indice}>
