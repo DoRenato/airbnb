@@ -14,7 +14,7 @@ export default function Acomodacoes(props: AcomodacoesProps) {
     return (
         <section className="
         py-6 gap-10 grid grid-cols-1 mx-5
-        md:grid-cols-2 md:mx-0 lg:grid-cols-4
+        md:grid-cols-2 md:mx-0 lg:grid-cols-4 md:gap-5
         ">
             {listaAcomodacoes.map((item, indice)=>(
                 <div key={indice}>

@@ -29,7 +29,7 @@ export default async function PaginaDetalhes({params} : {params: Promise<PaginaD
             </header>
 
             <main className="container mx-auto py-15">
-                <h1 className="font-bold text-lg pb-2">
+                <h1 className="font-bold text-lg pb-2 px-5 md:px-0">
                     {acomodacao.location.description}
                 </h1>
                 <Galeria fotos={acomodacao.photos}/>
