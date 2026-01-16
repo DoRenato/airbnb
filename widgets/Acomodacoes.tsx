@@ -12,7 +12,10 @@ interface AcomodacoesProps{
 export default function Acomodacoes(props: AcomodacoesProps) {
     const listaAcomodacoes = props.accommodation
     return (
-        <section className="py-6 gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <section className="
+        py-6 gap-10 grid grid-cols-1 mx-5
+        md:grid-cols-2 md:mx-0 lg:grid-cols-4
+        ">
             {listaAcomodacoes.map((item, indice)=>(
                 <div key={indice}>
                     <Acomodacao 

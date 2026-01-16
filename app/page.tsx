@@ -22,7 +22,7 @@ export default async function Home() {
         <Acomodacoes accommodation={dados.accommodation}/>
       </main>
 
-      <footer className="bg-gray-100">
+      <footer className="bg-gray-200">
         <Rodape/>
       </footer>
     </>

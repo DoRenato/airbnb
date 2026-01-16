@@ -40,7 +40,9 @@ export default function AbaHorizontal(props:AbaHorizontalProps) {
                     <SwiperSlide key={indice}>
                         <Link href="#" className='flex flex-col items-center hover:text-red-400'>
                             <Image src={icone.source} alt={icone.description} width={24} height={24}/>
-                            <span>{icone.description}</span>
+                            <span className='text-center'>
+                                {icone.description}
+                            </span>
                         </Link>
                     </SwiperSlide>
                 ))}
